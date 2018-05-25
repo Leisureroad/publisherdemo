@@ -1,0 +1,6 @@
+applications:
+- name: publisherdemo
+  memory: 1G
+  routes:
+  - route: publisherdemo.pcfbeta.io
+  path: target/publisherdemo-0.0.1-SNAPSHOT.jar
