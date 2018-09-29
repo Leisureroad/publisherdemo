@@ -11,12 +11,12 @@ public class PublisherdemoApplication {
 
 	@RequestMapping("/")
 	public String hello() {
-		return "Hello World!";
+		return "Hello from publisher!";
 	}
 
 	@RequestMapping("/name")
 	public String getName() {
-		return "Fan Liu";
+		return "Hello from publisher: Fan Liu!";
 	}
 
 	public static void main(String[] args) {
