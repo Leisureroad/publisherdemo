@@ -2,10 +2,12 @@ applications:
 - name: publisherdemo
   memory: 1G
   routes:
-  - route: publisherdemo.pcfbeta.io
-  #- route: publisherdemo.pcfdemo.com
+#  - route: publisherdemo.apps.pcfone.io
+  - route: publisherdemo.pcfdemo.com
   path: target/publisherdemo-0.0.1-SNAPSHOT.jar
   env:
-    TRUST_CERT: api.run.pcfbeta.io
+    #TRUST_CERT: api.run.pcfbeta.io
+    TRUST_CERT: api.pcfdemo.io
+#    TRUST_CERT: api.pcfone.io
   services:
   - eureka-demo

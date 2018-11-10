@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
+
 @SpringBootApplication
 @RestController
 public class PublisherdemoApplication {
@@ -16,7 +21,11 @@ public class PublisherdemoApplication {
 
 	@RequestMapping("/name")
 	public String getName() {
-		return "Hello from publisher: Fan Liu!";
+
+		List<String> nameList = Arrays.asList("Beijing", "Shanghai", "GuangZhou", "Shenzhen");
+		Random random = new Random();
+		String cityName = nameList.get(random.nextInt(nameList.size()));
+		return "Hello from publisher: " + cityName;
 	}
 
 	public static void main(String[] args) {
